@@ -26,8 +26,12 @@ public class FestaFerragnez {
         //verifico se il nome dell'utente è presente nella lista
         //e comunico se può entrare o meno
 
-        /*BONUS: ciclo for
+
         boolean found = false;
+
+
+        /*BONUS: ciclo for
+
 
         for(int i = 0; i < invitatiFesta.length; i++) {
 
@@ -49,9 +53,24 @@ public class FestaFerragnez {
 
         //ciclo while
 
+        int i = 0;
 
+        while( i < invitatiFesta.length-1) {
 
+            i++;
 
+            if(invitatiFesta[i].equals(name))
+            {
+                found = true;
+                System.out.println("Il tuo nome è presente nella lista. Puoi entrare!");
+                break;
+            }
+        }
+
+        if(!found)
+        {
+        System.out.println("Mi dispiace, il tuo nome non è presente nella lista");
+        }
 
         //chiudo lo scanner
         sc.close();
