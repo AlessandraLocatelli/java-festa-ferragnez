@@ -14,8 +14,8 @@ public class FestaFerragnez {
 
     public static void main(String[] args) {
 
-    //creo una array stringa con all'interno i nomi degli invitati
-        String[] invitatiFesta = { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti",
+        //creo una array stringa con all'interno i nomi degli invitati
+        String[] invitatiFesta = {"Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti",
                 "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
 
         // chiedo il nome all'utente tramite input
@@ -30,47 +30,48 @@ public class FestaFerragnez {
         boolean found = false;
 
 
-        /*BONUS: ciclo for
+        //ciclo for
 
 
-        for(int i = 0; i < invitatiFesta.length; i++) {
+        /*for(int i = 0; i < invitatiFesta.length; i++) {
 
 
             if (invitatiFesta[i].equals(name)) {
 
                 found = true;
-                System.out.println("Il tuo nome è presente nella lista. Puoi entrare!");
                  break;
             }
 
-        }
-
-        if(!found)
-        {
-            System.out.println("Mi dispiace, il tuo nome non è presente nella lista");
-
         }*/
+
+
 
         //ciclo while
 
         int i = 0;
 
-        while( i < invitatiFesta.length-1) {
+        while (!found && i < invitatiFesta.length) {
+
+            if (invitatiFesta[i].equals(name)) {
+                found = true;
+                break;
+            }
 
             i++;
 
-            if(invitatiFesta[i].equals(name))
-            {
-                found = true;
-                System.out.println("Il tuo nome è presente nella lista. Puoi entrare!");
-                break;
-            }
+
         }
 
-        if(!found)
+        if (found)
         {
-        System.out.println("Mi dispiace, il tuo nome non è presente nella lista");
+            System.out.println("Il tuo nome è presente nella lista. Puoi entrare!");
+        } else
+        {
+            System.out.println("Mi dispiace, il tuo nome non è presente nella lista");
         }
+
+
+
 
         //chiudo lo scanner
         sc.close();
